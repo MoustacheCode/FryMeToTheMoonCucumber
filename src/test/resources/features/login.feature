@@ -5,15 +5,15 @@
       Given user is on the login page
 
     Scenario: Successful Login
-      When user enters username "STANDARD_USERNAME"
-      And user enters password "STANDARD_PASSWORD"
+      When user enters correct username
+      And user enters correct password
       And user clicks the login button
       Then user should be redirected back to the home page
 
 
     Scenario: Login with incorrect password
-      When user enters username "STANDARD_USERNAME"
-      And user enters password "incorrect_password"
+      When user enters correct username
+      And user enters incorrect password
       And user clicks the login button
       Then user should see invalid credentials error
 

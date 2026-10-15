@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class login_steps {
+public class LoginSteps {
 
 // Shared or reused steps
 
@@ -13,13 +13,13 @@ public class login_steps {
         System.out.println("I am navigating to the login page..");
     }
 
-    @When("user enters username {string")
-    public void userEntersUsername(String username) {
+    @When("user enters correct username")
+    public void userEntersUsername() {
         System.out.println("I am entering username..");
     }
 
-    @When("user enters password {string")
-    public void userEntersPassword(String password) {
+    @When("user enters correct password")
+    public void userEntersPassword() {
         System.out.println("I am entering password..");
     }
 
