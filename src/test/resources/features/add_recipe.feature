@@ -6,8 +6,8 @@ Feature: Add a new recipe
 
 
     Scenario: User can successfully add their own recipe
-      When user select the add recipe button
-      And user submit a new recipe with the following details:
+      When user selects the add recipe button
+      And user submits a new recipe with the following details:
 
         | Title             | Description                                 | Ingredients                     | Instructions                      | Category | Cook Time |
         | Rik's Test Recipe | A delicious Test Recipe under 30 minutes!   | Add 500g of Test to oven dish   | Bake Test in oven for 25 minutes  | Snacks   | 25        |
