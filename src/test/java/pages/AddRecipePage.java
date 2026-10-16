@@ -16,6 +16,7 @@ public class AddRecipePage extends BasePage {
     private final By cookTimeInput = By.id("id_cook_time_minutes");
     private final By saveRecipeButton = By.xpath("//button[text()='Save Recipe']");
     private final By cancelRecipeButton = By.cssSelector(".btn-cancel");
+    private final By successHeader = By.className("receipt-popup-card");
 
 
 
@@ -69,6 +70,10 @@ public class AddRecipePage extends BasePage {
     public boolean isTitleFieldRequired() {
         String isRequired = driver.findElement(titleInput).getAttribute("required");
         return isRequired != null && isRequired.equals("true");
+    }
+
+    public String getSuccessPopupText() {
+        return waitForVisible(successHeader).getText();
     }
 
 

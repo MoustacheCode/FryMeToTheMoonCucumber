@@ -11,7 +11,7 @@ import org.junit.platform.suite.api.*;
 //        @ConfigurationParameter(key= Constants.GLUE_PROPERTY_NAME, value="steps, shared"),
 //        @ConfigurationParameter(key= "cucumber.snippet-type", value ="camelcase")
 //})
-@ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME, value = "@Login")
+@ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME, value = "@AddRecipe")
 
 public class TestRunner {
 

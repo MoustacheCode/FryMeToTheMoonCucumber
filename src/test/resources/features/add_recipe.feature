@@ -1,3 +1,4 @@
+@AddRecipe
 Feature: Add a new recipe
 
   Background:
@@ -12,7 +13,7 @@ Feature: Add a new recipe
         | Title             | Description                                 | Ingredients                     | Instructions                      | Category | Cook Time |
         | Rik's Test Recipe | A delicious Test Recipe under 30 minutes!   | Add 500g of Test to oven dish   | Bake Test in oven for 25 minutes  | Snacks   | 25        |
 
-      And user click the save recipe button
+      And user clicks on the save recipe button
       Then user should see a success confirmation message
       And user should be redirected to the Homepage
 
@@ -24,7 +25,7 @@ Feature: Add a new recipe
         | Rik's Cancel Recipe| A delicious Test Recipe to be cancelled in 2 seconds!   | Throw it all in the bin because we've changed our minds!| Turn off the oven | Snacks   | 25        |
 
       And user clicks on the cancel recipe button
-      Then user should be redirected back to the Homepage
+      Then user should be redirected to the Homepage
       And user should still be logged in
 
 
