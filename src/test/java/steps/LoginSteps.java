@@ -89,14 +89,6 @@ public class LoginSteps {
         Assertions.assertTrue(homePage.isLoggedIn(), "I couldn't find the Logout button..");
     }
 
-    @Given("user is on the Homepage")
-    public void userIsOnTheHomepage() {
-        System.out.println("Checking user is on Homepage..");
-        String currentUrl = testContext.getDriver().getCurrentUrl();
-        String expectedUrl = ConfigReader.baseUrl();
-
-        Assertions.assertEquals(expectedUrl, currentUrl, "I mustn't be on the homepage..");
-    }
 
     @When("user clicks the logout button")
     public void userClicksTheLogoutButton() {
