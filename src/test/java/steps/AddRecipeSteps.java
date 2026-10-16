@@ -22,15 +22,7 @@
 //
 //    // Shared steps
 //
-//    @Given("user has successfully logged in")
-//    public void userHasSuccessfullyLoggedIn() {
-//        System.out.println("Pre-req - User is logged in..");
-//    }
 //
-//    @Given("user is on the Homepage")
-//    public void userIsOnTheHomepage() {
-//        System.out.println("Checking I'm on the homepage..");
-//    }
 //
 //    // Scenario 1 steps
 //

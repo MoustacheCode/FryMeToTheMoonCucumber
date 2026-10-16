@@ -76,19 +76,6 @@ public class LoginSteps {
 
     // Scenario 3 - Log out
 
-    @Given("user has successfully logged in")
-    public void userHasSuccessfullyLoggedIn() {
-        System.out.println("Pre-Req: User is logged in..");
-        HomePage homePage = new HomePage(testContext.getDriver());
-        this.loginPage = homePage.clickLogin();
-
-        loginPage.enterUsername();
-        loginPage.enterPassword();
-        loginPage.userClicksLoginButton();
-
-        Assertions.assertTrue(homePage.isLoggedIn(), "I couldn't find the Logout button..");
-    }
-
 
     @When("user clicks the logout button")
     public void userClicksTheLogoutButton() {

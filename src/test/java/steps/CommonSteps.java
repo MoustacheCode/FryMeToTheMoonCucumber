@@ -3,6 +3,8 @@ package steps;
 import config.ConfigReader;
 import io.cucumber.java.en.Given;
 import org.junit.jupiter.api.Assertions;
+import pages.HomePage;
+import pages.LoginPage;
 import shared.TestContext;
 
 public class CommonSteps {
@@ -19,5 +21,18 @@ public class CommonSteps {
         String currentUrl = testContext.getDriver().getCurrentUrl();
         String expectedUrl = ConfigReader.baseUrl();
         Assertions.assertEquals(expectedUrl, currentUrl, "I don't seem to be on the Homepage..");
+    }
+
+    @Given("user has successfully logged in")
+    public void userHasSuccessfullyLoggedIn() {
+        System.out.println("Pre-Req: User is logged in..");
+        HomePage homePage = new HomePage(testContext.getDriver());
+        LoginPage loginPage = homePage.clickLogin();
+
+        loginPage.enterUsername();
+        loginPage.enterPassword();
+        loginPage.userClicksLoginButton();
+
+        Assertions.assertTrue(homePage.isLoggedIn(), "I couldn't find the Logout button..");
     }
 }

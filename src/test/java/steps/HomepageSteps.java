@@ -8,10 +8,7 @@
 //
 //    // Shared steps
 //
-//    @Given("the user is on the Homepage")
-//    public void theUserIsOnTheHomepage() {
-//        System.out.println("Heading to the Homepage..");
-//    }
+
 //
 //    @When("user clicks the filter button")
 //    public void userClicksTheFilterButton() {
