@@ -1,5 +1,6 @@
 
-  Feature: User logs in
+@Login
+Feature: User logs in
 
     Background:
       Given user is on the login page

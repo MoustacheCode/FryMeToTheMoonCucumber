@@ -12,6 +12,7 @@ public class TestContext {
 
     public void startDriver() {
         driver = WebDriverFactory.createWebDriver(ConfigReader.browser());
+
         driver.get(ConfigReader.baseUrl());
         System.out.println(driver.getCurrentUrl() + " current url");
     }

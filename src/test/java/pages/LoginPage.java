@@ -47,6 +47,10 @@ public class LoginPage extends BasePage {
         this.click(this.loginButton);
     }
 
+    public void userEntersWrongPassword(String password) {
+        this.type(this.passwordInput, password);
+    }
+
 
 }
 

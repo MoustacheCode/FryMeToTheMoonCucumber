@@ -3,11 +3,11 @@ package shared;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-public class Hook {
+public class Hooks {
 
     private final TestContext context;
 
-    public Hook(TestContext context) {
+    public Hooks(TestContext context) {
         this.context = context;
     }
 
