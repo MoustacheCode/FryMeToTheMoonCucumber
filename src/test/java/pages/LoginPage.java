@@ -35,7 +35,17 @@ public class LoginPage extends BasePage {
         return this.textOf(this.error);
     }
 
+    public void enterUsername() {
+        this.type(this.usernameInput, ConfigReader.standardUsername());
+    }
 
+    public void enterPassword() {
+        this.type(this.passwordInput, ConfigReader.standardPassword());
+    }
+
+    public void userClicksLoginButton() {
+        this.click(this.loginButton);
+    }
 
 
 }

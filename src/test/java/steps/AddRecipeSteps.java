@@ -66,6 +66,7 @@ public class AddRecipeSteps {
 
     @When("user clicks on the save recipe button")
     public void userClicksOnTheSaveRecipeButton() {
+        addRecipePage.saveRecipe();
         System.out.println("I'm clicking the save recipe button..");
     }
 

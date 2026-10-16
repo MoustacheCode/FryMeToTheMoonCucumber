@@ -3,28 +3,44 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.HomePage;
+import pages.LoginPage;
+import shared.TestContext;
 
 public class LoginSteps {
+
+    private final TestContext testContext;
+    private LoginPage loginPage;
+
+    public LoginSteps(TestContext testContext) {
+        this.testContext = testContext;
+    }
 
 // Shared or reused steps
 
     @Given("user is on the login page")
     public void userIsOnTheLoginPage() {
+        HomePage homePage = new HomePage(testContext.getDriver());
+        this.loginPage = homePage.clickLogin();
+
         System.out.println("I am navigating to the login page..");
     }
 
     @When("user enters correct username")
     public void userEntersUsername() {
+        loginPage.enterUsername();
         System.out.println("I am entering username..");
     }
 
     @When("user enters correct password")
     public void userEntersPassword() {
+        loginPage.enterPassword();
         System.out.println("I am entering password..");
     }
 
     @When("user clicks the login button")
     public void userClicksTheLoginButton() {
+        loginPage.userClicksLoginButton();
         System.out.println("Clicking the login button..");
     }
 
