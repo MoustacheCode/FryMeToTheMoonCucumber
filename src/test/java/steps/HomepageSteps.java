@@ -23,6 +23,8 @@ public class HomepageSteps {
     @When("user clicks the filter button")
     public void userClicksTheFilterButton() {
         System.out.println("I'm clicking hte filter button..");
+        HomePage homePage = new HomePage(testContext.getDriver());
+        homePage.clickFilter();
     }
 
     // Scenario 1 steps
@@ -30,6 +32,8 @@ public class HomepageSteps {
     @When("user selects the View button on a recipe")
     public void userSelectsTheViewButtonOnARecipe() {
         System.out.println("I'm clicking on the view button..");
+        HomePage homePage = new HomePage(testContext.getDriver());
+        homePage.click
     }
 
     @Then("user should be directed to the specific recipe page")
