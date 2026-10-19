@@ -48,6 +48,7 @@ public class HomePage extends BasePage {
     }
 
     public void clickFilter() {
+        waitForVisible(filterButton);
         click(filterButton);
 
     }
