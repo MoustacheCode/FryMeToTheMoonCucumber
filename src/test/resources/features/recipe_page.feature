@@ -1,3 +1,4 @@
+@feature
 Feature: Recipe Details and Interactions
 
   Background:

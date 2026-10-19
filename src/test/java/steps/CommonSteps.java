@@ -2,17 +2,21 @@ package steps;
 
 import config.ConfigReader;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.RecipeCard;
 import shared.TestContext;
 
 public class CommonSteps {
 
     private final TestContext testContext;
+    private RecipeCard recipeCard;
 
     public CommonSteps(TestContext testContext) {
         this.testContext = testContext;
+        this.recipeCard = new RecipeCard(testContext.getDriver());
     }
 
     @Given("user is on the Homepage")
@@ -35,4 +39,11 @@ public class CommonSteps {
 
         Assertions.assertTrue(homePage.isLoggedIn(), "I couldn't find the Logout button..");
     }
+
+    @When("user clicks the View Recipe button on a recipe card")
+    public void userClicksTheViewRecipeButtonOnARecipeCard() {
+        System.out.println("I'm clicking on the view button..");
+        recipeCard.clickViewRecipeButton();
+    }
+
 }
