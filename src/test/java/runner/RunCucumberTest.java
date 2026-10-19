@@ -14,6 +14,6 @@ import org.junit.platform.suite.api.*;
 
 // @ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME, value = "@feature")
 
-public class TestRunner {
+public class RunCucumberTest {
 
 }
