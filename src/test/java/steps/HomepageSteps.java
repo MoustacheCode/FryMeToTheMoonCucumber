@@ -67,7 +67,7 @@ public class HomepageSteps {
     @Then("user should see {string} in the recipe results")
     public void userShouldSeeInTheRecipeResults(String expectedRecipe) {
         System.out.println("Checked the list contains " +expectedRecipe);
-        recipeCard.waitForAllVisible(recipeCard.getRecipeTitleLocator());
+        // recipeCard.waitForAllVisible(recipeCard.getRecipeTitleLocator());
 
         List<String> actualRecipeTitles = recipeCard.getRecipeTitle();
         boolean recipeMatch = actualRecipeTitles.stream().anyMatch(title -> title.contains(expectedRecipe));

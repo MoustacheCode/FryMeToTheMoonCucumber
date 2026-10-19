@@ -35,8 +35,9 @@ public class RecipeCard extends BasePage {
 
     // Refactored to Stream and List all recipes on the page
     public List<String> getRecipeTitle() {
-        List<WebElement> titleElements = waitForAllVisible(recipeTitle);
-        return titleElements.stream().map(WebElement::getText).toList();
+        // List<WebElement> titleElements =
+        waitForAllVisible(recipeTitle);
+        return driver.findElements(recipeTitle).stream().map(WebElement::getText).toList();
     }
 
     // Refactored to return all category results to return as a List
