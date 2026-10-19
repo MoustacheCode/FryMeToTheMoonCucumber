@@ -1,5 +1,6 @@
 package steps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -79,6 +80,7 @@ public class HomepageSteps {
         System.out.println("I'm selecting the category " + categoryName);
         homePage.selectCategory(categoryName);
     }
+
 
     @Then("all displayed recipes should belong to the {string} category")
     public void allDisplayedRecipesShouldBelongToTheCategory(String expectedCategory) {

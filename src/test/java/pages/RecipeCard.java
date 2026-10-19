@@ -41,9 +41,9 @@ public class RecipeCard extends BasePage {
 
     // Refactored to return all category results to return as a List
     public List<String> getRecipeCategory() {
+        waitForAllVisible(recipeCategory);
         return driver.findElements(recipeCategory).stream().map(WebElement::getText).toList();
     }
-
 
 
 
