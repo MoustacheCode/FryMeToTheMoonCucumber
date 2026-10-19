@@ -45,7 +45,9 @@ public class RecipeCard extends BasePage {
         return categoryElements.stream().map(WebElement::getText).toList();
     }
 
-
+    public By getRecipeTitleLocator() {
+        return this.recipeTitle;
+    }
 
 }
 
